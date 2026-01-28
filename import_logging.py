@@ -1,4 +1,3 @@
-python
 import logging
 import sys
 import asyncio
@@ -440,3 +439,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
