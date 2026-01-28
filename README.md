@@ -1,4 +1,4 @@
-Антирейд Бот для Telegram v4.0
+# Антирейд Бот для Telegram v4.0
 
 ## Основные возможности
 
@@ -32,18 +32,18 @@ pip install -r requirements.txt
 ```python
 @dataclass
 class BotConfig:
-    TOKEN: str = "YOUR_BOT_TOKEN_HERE"
-    ADMIN_IDS: List[int] = [123456789, 987654321]
+    TOKEN: str = "YOUR_BOT_TOKEN_HERE"  # Токен от @BotFather
+    ADMIN_IDS: List[int] = [123456789, 987654321]  # ID администраторов бота
     
-    RAID_THRESHOLD: int = 4
-    TIME_WINDOW: int = 1
+    RAID_THRESHOLD: int = 4  # Сколько входов = рейд (рекомендуется 4)
+    TIME_WINDOW: int = 1  # За сколько секунд считать входы
     
-    CHECK_USERNAME: bool = True
-    CHECK_PROFILE_PHOTO: bool = False
-    MIN_ACCOUNT_AGE_DAYS: int = 0
+    CHECK_USERNAME: bool = True  # Банить без username (@никнейма)
+    CHECK_PROFILE_PHOTO: bool = False  # Банить без аватарки
+    MIN_ACCOUNT_AGE_DAYS: int = 0  # Мин. возраст аккаунта в днях (0 = выкл)
     
-    AUTO_DELETE_JOIN_MESSAGES: bool = True
-    BAN_DURATION: int = 0
+    AUTO_DELETE_JOIN_MESSAGES: bool = True  # Удалять сообщения "присоединился"
+    BAN_DURATION: int = 0  # Длительность бана в секундах (0 = навсегда)
 ```
 
 ### 3. Получите токен бота:
